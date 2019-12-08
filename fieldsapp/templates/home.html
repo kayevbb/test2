@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for post in object_list %}
+        <div class="post-entry">
+            {#                <img src="{{ post.cover.url}}" alt="{{ post.title }}">#}
+            <h2> <a href="#"> <img src="{{ post.avatar.url}}"> </a> </h2>
+            <p> {{ post.body }}</p>
+            <p> {{ post.address }}</p>
+            <p> {{ post.phone_number }}</p>
+            <p> {{ post.city }}</p>
+            <p> {{ post.gender }}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}
+
